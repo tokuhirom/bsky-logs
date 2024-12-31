@@ -1,0 +1,11 @@
+name: Bluesky to Markdown
+
+on: push
+
+jobs:
+  take-logs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tokuhirom/rss-to-markdown@v1
+        with:
+          who-to-greet: "GitHub"
