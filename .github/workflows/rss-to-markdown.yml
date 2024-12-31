@@ -1,6 +1,9 @@
 name: Bluesky to Markdown
 
-on: push
+on:
+  schedule:
+     - cron: "*/15 * * * *" # 15分に1回実行
+  workflow_dispatch: # 手動実行を有効化
 
 jobs:
   take-logs:
