@@ -12,3 +12,15 @@ jobs:
       - uses: tokuhirom/rss-to-markdown@v1
         with:
           rss_url: "https://bsky.app/profile/did:plc:lxhl5eomhtxsraduecf3n6p3/rss"
+
+      - name: Push built files
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add logs/
+          if ! git diff --cached --quiet; then
+            git commit -m "Add built files"
+            git push origin HEAD
+          else
+            echo "No changes to commit"
+          fi
