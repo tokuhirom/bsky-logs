@@ -12,6 +12,9 @@ jobs:
   take-logs:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
       - uses: tokuhirom/bsky-to-markdown@v1
         with:
           rss_url: "https://bsky.app/profile/did:plc:lxhl5eomhtxsraduecf3n6p3/rss"
