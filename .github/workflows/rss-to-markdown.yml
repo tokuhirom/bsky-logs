@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: tokuhirom/rss-to-markdown@v1
         with:
-          who-to-greet: "GitHub"
+          rss_url: "https://bsky.app/profile/did:plc:lxhl5eomhtxsraduecf3n6p3/rss"
